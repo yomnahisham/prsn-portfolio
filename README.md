@@ -65,12 +65,9 @@ Replace placeholder images with your own project screenshots and profile picture
 
 ## Deployment
 
-The site can be deployed to GitHub Pages with these steps:
+The site is automatically deployed to GitHub Pages using GitHub Actions.
 
-1. Push your code to a GitHub repository
-2. Go to repository Settings > Pages
-3. Select main branch as source
-4. Save and your site will be published
+Last deployment: 2024-04-26 17:30 UTC
 
 ## License
 
