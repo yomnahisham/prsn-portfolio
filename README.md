@@ -42,7 +42,7 @@ This portfolio is a single-page website built with HTML, CSS and JavaScript, fea
 
 1. Clone the repository
    ```
-   git clone https://github.com/yomnahisham/portfolio.git
+   git clone https://github.com/yomnahisham/prsn-portfolio.git
    ```
 
 2. Open `index.html` in your browser to view the website
@@ -67,7 +67,7 @@ Replace placeholder images with your own project screenshots and profile picture
 
 The site is automatically deployed to GitHub Pages using GitHub Actions.
 
-Last deployment: 2024-04-26 17:30 UTC
+Last deployment: 2024-04-26 17:45 UTC
 
 ## License
 
