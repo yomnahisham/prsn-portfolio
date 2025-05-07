@@ -4,6 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recha
 import LEDSimulation from '../components/LEDSimulation';
 import suImg from '../assets/images/su.png';
 import oscarsImg from '../assets/images/oscars.png';
+import vivadoImg from '../assets/images/vivado-make.png';
 
 // C++ Code Snippet Component
 const CppSnippet = ({ code }) => {
@@ -149,6 +150,41 @@ extern "C" {
         return led_state;
     }
 }`
+  },
+  {
+    id: 4,
+    title: 'Vivado-Make',
+    description: 'A powerful build system for Xilinx Vivado projects, automating the FPGA development workflow. Implements a Makefile-based approach to streamline project creation, synthesis, implementation, and bitstream generation.',
+    tags: ['Hardware'],
+    technologies: ['FPGA', 'Vivado', 'Make', 'Hardware Design', 'Automation'],
+    github: 'https://github.com/yomnahisham/Vivado-Make',
+    image: vivadoImg,
+    codeSnippet: `# Makefile for Vivado project automation
+.PHONY: all clean project synth impl bitstream
+
+# Project configuration
+PROJECT_NAME = my_fpga_project
+PART = xc7k70tfbv676-1
+TOP_MODULE = top_module
+
+# Build targets
+all: bitstream
+
+project:
+    vivado -mode batch -source scripts/create_project.tcl
+
+synth: project
+    vivado -mode batch -source scripts/run_synth.tcl
+
+impl: synth
+    vivado -mode batch -source scripts/run_impl.tcl
+
+bitstream: impl
+    vivado -mode batch -source scripts/generate_bitstream.tcl
+
+clean:
+    rm -rf *.jou *.log *.runs *.cache *.hw *.ip_user_files
+    rm -rf $(PROJECT_NAME).xpr $(PROJECT_NAME).runs`
   }
 ];
 
